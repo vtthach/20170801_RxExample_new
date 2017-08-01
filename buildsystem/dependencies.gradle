@@ -1,0 +1,47 @@
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+ext {
+    //Android
+    androidBuildToolsVersion = "26.0.0"
+    androidMinSdkVersion = 18
+    androidTargetSdkVersion = 25
+    androidCompileSdkVersion = 25
+
+    //Libraries
+    butterKnifeVersion = '8.4.0'
+    timberVersion = '4.1.1'
+
+    //Google
+    supportLibraryVersion = '25.3.1'
+    androidAnnotationsVersion = '23.1.1'
+    playServiceVersion = "11.0.2"
+    recyclerViewVersion = '25.3.1'
+
+    //Testing
+    jUnitVersion = '4.12'
+
+    utilDependencies = [
+            supportLibrary       : "com.android.support:appcompat-v7:${supportLibraryVersion}",
+            visionPlayService    : "com.google.android.gms:play-services-vision:${playServiceVersion}",
+            androidAnnotations   : "com.android.support:support-annotations:${androidAnnotationsVersion}",
+            recyclerView         : "com.android.support:recyclerview-v7:${recyclerViewVersion}",
+
+            butterKnife          : "com.jakewharton:butterknife:${butterKnifeVersion}",
+            butterKnifeCompiler  : "com.jakewharton:butterknife-compiler:${butterKnifeVersion}",
+            timber               : "com.jakewharton.timber:timber:${timberVersion}",
+
+    ]
+
+    reactiveX = [
+            rxJava               : "io.reactivex.rxjava2:rxjava:2.1.0",
+            rxAndroid            : "io.reactivex.rxjava2:rxandroid:2.0.1",
+    ]
+
+    testDependencies = [
+            junit              : "junit:junit:${jUnitVersion}",
+    ]
+}
